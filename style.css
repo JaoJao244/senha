@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #121214;
+    background-color: #30303d;
     color: #e1e1e6;
     display: flex;
     justify-content: center;
@@ -16,19 +16,19 @@ body {
 }
 
 .card {
-    background-color: #202024;
-    border: 1px solid #323238;
+    background-color: #93939c;
+    border: 1px solid #46464b;
     border-radius: 8px;
     padding: 30px;
     width: 100%;
     max-width: 480px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 25px rgb(0, 0, 0);
 }
 
 h1 {
     font-size: 1.4rem;
     margin-bottom: 20px;
-    color: #3e197a;
+    color: #240b4b;
     text-align: center;
 }
 
@@ -40,10 +40,10 @@ h1 {
 .output-group input {
     flex: 1;
     padding: 12px;
-    background-color: #121214;
-    border: 1px solid #323238;
+    background-color: #0d0d0e;
+    border: 1px solid #32323f;
     border-radius: 4px 0 0 4px;
-    color: #542197;
+    color: #4a0c9b;
     font-family: monospace;
     font-size: 1.1rem;
     outline: none;
@@ -51,7 +51,7 @@ h1 {
 
 .output-group button {
     padding: 12px 16px;
-    background-color: #3a167c;
+    background-color: #190244;
     color: white;
     border: none;
     border-radius: 0 4px 4px 0;
@@ -61,14 +61,14 @@ h1 {
 }
 
 .output-group button:hover {
-    background-color: #43117c;
+    background-color: #0f031d;
 }
 
 .option-group {
     margin-bottom: 15px;
 }
 
-label {
+< !DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Gerador de Senhas Seguras</title><link rel="stylesheet" href="style.css"></head><body><div class="card"><h1>Segurança Digital: Gerador de Senhas</h1><div class="output-group"><input type="text" id="password" readonly placeholder="Sua senha aparecerá aqui"><button onclick="copiarSenha()" id="btn-copy">Copiar</button></div><div class="slider-container"><div class="slider-header"><span>Tamanho da senha:</span><span id="length-val">12</span></div><input type="range" id="length" min="4" max="32" value="12" oninput="atualizarTamanho(this.value)"></div><div class="option-group"><label><input type="checkbox" id="uppercase" checked onchange="gerarSenha()">Incluir letras maiúsculas (A-Z)</label></div><div class="option-group"><label><input type="checkbox" id="lowercase" checked onchange="gerarSenha()">Incluir letras minúsculas (a-z)</label></div>label {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -88,15 +88,15 @@ label {
 
 input[type="range"] {
     width: 100%;
-    accent-color: #44117e;
+    accent-color: #2a0c4d;
 }
 
 .info-panel {
     margin-top: 25px;
     padding-top: 15px;
-    border-top: 1px solid #323238;
+    border-top: 1px solid #424264;
     font-size: 0.85rem;
-    color: #a8a8b3;
+    color: #c6c6d4;
 }
 
 .info-panel p {
@@ -104,7 +104,7 @@ input[type="range"] {
 }
 
 .entropy-value {
-    color: #00e699;
+    color: #04553a;
     font-weight: bold;
 }
 
@@ -112,8 +112,8 @@ input[type="range"] {
     width: 100%;
     padding: 12px;
     margin-top: 15px;
-    background-color: #320e85;
-    color: #121214;
+    background-color: #3e0cb4;
+    color: #000000;
     border: none;
     border-radius: 4px;
     font-weight: bold;
@@ -122,5 +122,5 @@ input[type="range"] {
 }
 
 .btn-generate:hover {
-    background-color: #40137a;
+    background-color: #240f3f;
 }
