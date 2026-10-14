@@ -1,19 +1,36 @@
-<div class="parametro-senha">
-    <h4 class="parametro-senha__titulo">Número de caracteres</h4>
-    <button class="parametro-senha__botao">-</button>
-    <button class="parametro-senha__botao">+</button>
-</div>
-<div class="parametro-senha">
-    <h4 class="parametro-senha__titulo">Número de caracteres</h4>
-    <button class="parametro-senha__botao">-</button>
-    <p class="parametro-senha__texto">12</p>
-    <button class="parametro-senha__botao">+</button>
-</div>
-<div class="parametro-senha">
-    <h4 class="parametro-senha__titulo">Número de caracteres</h4>
-    <div class="parametro-senha-botoes">
-        <button class="parametro-senha__botao">-</button>
-        <p class="parametro-senha__texto">12</p>
-        <button class="parametro-senha__botao">+</button>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas Seguras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Segurança Digital: Gerador de Senhas</h1>
+
+        <div class="output-group">
+            <input type="text" id="password" readonly placeholder="Sua senha aparecerá aqui">
+            <button onclick="copiarSenha()" id="btn-copy">Copiar</button>
+        </div>
+
+        <div class="slider-container">
+            <div class="slider-header">
+                <span>Tamanho da senha:</span>
+                <span id="length-val">12</span>
+            </div>
+            <input type="range" id="length" min="4" max="32" value="12" oninput="atualizarTamanho(this.value)">
+        </div>
+
+        <div class="option-group">
+            <label><input type="checkbox" id="uppercase" checked onchange="gerarSenha()"> Incluir letras maiúsculas
+                (A-Z)</label>
+        </div>
+        <div class="option-group">
+            <label><input type="checkbox" id="lowercase" checked onchange="gerarSenha()"> Incluir letras minúsculas
+                (a-z)</label>
+        </div>
